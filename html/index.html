@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咖啡大師</title>
+
+    <link rel="stylesheet" href="../styles/index.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- 建立header標籤: 定義頁首，包含網站標題, logo與導覽列 -->
+    <header>
+        <h1>咖啡大師</h1>
+        <nav>
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">精品咖啡</a></li>
+                <li><a href="#">社群分享</a></li>
+                <li><a href="#">聯繫我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 咖啡產區介紹 -->
+        <section class="beanIntroduction">
+            <!-- 標語 -->
+            <div id="mainSlogan">
+                <h2>品味世界，從這杯開始</h2>
+                <p><strong>橫跨咖啡帶，精選頂級豆，品嚐獨特地域風味</strong></p>
+            </div>
+
+            <!-- 咖啡產地資訊 -->
+            <div id="areaInformation">
+                <h1></h1>
+                <h2></h2>
+                <p></p>
+            </div>
+
+            <!-- 非洲產區 -->
+            <div id="Ethiopia" class="beacon"></div>
+            <div id="Kenya" class="beacon"></div>
+
+            <!-- 中南美洲產區 -->
+            <div id="Guatemala" class="beacon"></div>
+            <div id="Colombia" class="beacon"></div>
+            <div id="CostaRica" class="beacon"></div>
+            <div id="Brazil" class="beacon"></div>
+            <!-- 東南亞產區 -->
+
+            <div id="Indonesia" class="beacon"></div>
+        </section>
+
+        <!-- Product Swiper -->
+        <section class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- 產品會在index.js依照資料庫內容動態加入 -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </section>
+
+        <!-- 換區銜接 -->
+        <section class="transition">
+            <div id="transitionSlogan">
+                <p><strong>果酸</strong>的明亮與<strong>焦糖</strong>的沉穩比例恰到好處</p>
+                <p>入口是花香，尾韻是甘甜，層次豐富如人生，</p>
+                <p>慢啜一口，感受其中的平衡與美好。</p>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <!-- 建立footer標籤: 定義頁尾 -->
+    <footer>
+
+    </footer>
+
+
+
+
+
+    <!-- 外部引入Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- 外部引入jQuery -->
+    <script src="../js/jquery-3.7.1.js"></script>
+    <!-- 外部引入js -->
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

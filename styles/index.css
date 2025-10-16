@@ -1,0 +1,323 @@
+/************************************
+ * 1. 基礎樣式 (BASE)
+ * - CSS Reset
+ ************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/************************************
+ * 2. 頁首導覽列 (HEADER & NAVIGATION)
+ ************************************/
+
+header {
+    background-color: rgb(30, 30, 30, 0.8);
+    width: 100vw;
+    height: 75px;
+    position: fixed;
+    z-index: 999;
+    /*將header移到圖層上方*/
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header li {
+    /* 轉換成行內元素，並把li元素橫向排列 */
+    display: inline;
+    margin-right: 4vw;
+}
+
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 75px;
+    font-size: 28px;
+}
+
+header h1 {
+    color: yellow;
+    position: absolute;
+    left: 10vw;
+    top: 0;
+    line-height: 75px;
+    width: 150px;
+    background-image: url(../images/L3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+
+    text-indent: -9999px;
+}
+
+/************************************
+ * 3. 咖啡豆產區介紹區 (BEANS INTRODUCTION SECTION)
+ * - 世界地圖與定位點的容器
+ ************************************/
+
+.beanIntroduction {
+    width: 100vw;
+    height: 50vw;
+    position: relative;
+    background-color: rgba(127, 217, 255, 0.288);
+    background-image: url(../images/worldmap.png), url(../images/ba1.png);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#mainSlogan,
+#areaInformation {
+
+    position: absolute;
+    top: 30%;
+
+    /* 步驟 2: 水平置中技巧 (絕對定位元素置中) */
+    /* 將左邊緣移到父容器中間 */
+    left: 50%;
+    /* 再往左移動自身寬度的一半 */
+    transform: translateX(-50%);
+
+    /* (重要) 必須設定寬度，讓置中技巧生效 */
+    width: 45%;
+
+    /* 步驟 3: 讓 H1 和 P 標籤內部的文字內容水平置中 */
+    text-align: center;
+
+    color: aliceblue;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    border-radius: 20px;
+
+    padding: 10px;
+
+}
+
+
+#mainSlogan h2 {
+    font-size: 40px;
+}
+
+#areaInformation h1 {
+    font-size: 35px;
+}
+
+#areaInformation h2 {
+    font-size: 25px;
+}
+
+
+#mainSlogan p,
+#areaInformation p {
+    font-size: 20px;
+}
+
+.showBeaconInformation {
+    background-color: rgba(250, 235, 215, 0.58);
+    transition: all 0.5s ease-in-out;
+}
+
+#areaInformation {
+    visibility: visible;
+}
+
+.beacon {
+    width: 3%;
+    height: 7%;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.beacon:hover {
+    filter: drop-shadow(0 0 10px rgba(11, 1, 28, 0.9));
+    transform: translateY(-3px) scale(1.05);
+}
+
+#Ethiopia {
+    position: absolute;
+    left: 54%;
+    /* 距離父元素左邊界百分比的距離 */
+    top: 52%;
+    /* 距離父元素上邊界百分比的距離 */
+    background-image: url(../images/beacon_red.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Kenya {
+    position: absolute;
+    left: 52%;
+    /* 距離父元素左邊界百分比的距離 */
+    top: 56%;
+    /* 距離父元素上邊界百分比的距離 */
+    background-image: url(../images/beacon_red.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#Guatemala {
+    position: absolute;
+    left: 25%;
+    /* 距離父元素左邊界百分比的距離 */
+    top: 49%;
+    /* 距離父元素上邊界百分比的距離 */
+    background-image: url(../images/beacon_blue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#CostaRica {
+    position: absolute;
+    left: 27%;
+    /* 距離父元素左邊界百分比的距離 */
+    top: 52%;
+    /* 距離父元素上邊界百分比的距離 */
+    background-image: url(../images/beacon_blue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Colombia {
+    position: absolute;
+    left: 30%;
+    /* 距離父元素左邊界百分比的距離 */
+    top: 57%;
+
+    /* 距離父元素上邊界百分比的距離 */
+    background-image: url(../images/beacon_blue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Brazil {
+    position: absolute;
+    left: 33%;
+    /* 距離父元素左邊界百分比的距離 */
+    top: 62%;
+    /* 距離父元素上邊界百分比的距離 */
+    background-image: url(../images/beacon_blue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Indonesia {
+    position: absolute;
+    left: 66.5%;
+    /* 距離父元素左邊界百分比的距離 */
+    top: 57%;
+    /* 距離父元素上邊界百分比的距離 */
+    background-image: url(../images/beacon_yellow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/************************************
+ * 4. 產品輪播 (Product Carousel)
+ ************************************/
+
+.swiper {
+    width: 80vw;
+    height: 35vw;
+}
+
+.card {
+    max-width: 250px;
+    line-height: 1.8;
+    text-align: center;
+    font-family: arial;
+
+}
+
+.card img {
+    width: 100%;
+}
+
+.price {
+    color: rgb(123, 91, 69);
+    font-size: 18px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+
+/************************************
+ * 5. 區域過度
+ ************************************/
+
+.transition {
+    width: 100vw;
+    height: 50vw;
+    position: relative;
+    background-color: rgba(127, 217, 255, 0.288);
+    background-image: url(../images/transition1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#transitionSlogan{
+
+    position: absolute;
+    top: 40%;
+
+    /* 步驟 2: 水平置中技巧 (絕對定位元素置中) */
+    /* 將左邊緣移到父容器中間 */
+    left: 50%;
+    /* 再往左移動自身寬度的一半 */
+    transform: translateX(-50%);
+
+    /* (重要) 必須設定寬度，讓置中技巧生效 */
+    width: 50%;
+
+    /* 步驟 3: 讓 H1 和 P 標籤內部的文字內容水平置中 */
+    text-align: center;
+
+    color: aliceblue;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    font-size: 28px;
+
+}
+
