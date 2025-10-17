@@ -59,14 +59,14 @@
             <div id="Indonesia" class="beacon"></div>
         </section>
 
-        <!-- Product Swiper -->
-        <section class="swiper mySwiper">
-            <div class="swiper-wrapper">
+        <!-- 產品資訊卡輪播 -->
+        <section class="swiper productSwiper">
+            <div class="swiper-wrapper productWrapper">
                 <!-- 產品會在index.js依照資料庫內容動態加入 -->
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next product-next"></div>
+            <div class="swiper-button-prev product-prev"></div>
+            <div class="swiper-pagination product-pagination"></div>
         </section>
 
         <!-- 換區銜接 -->
@@ -77,29 +77,31 @@
                 <p>慢啜一口，感受其中的平衡與美好。</p>
             </div>
         </section>
-    </main>
+
+        <!-- 顧客評分卡輪播 -->
+        <section class="swiper reviewSwiper">
+
+            <div class="swiper-wrapper reviewWrapper">
+                <!-- 客戶評分卡會在index.js依照資料庫內容動態加入 -->                
+            </div>
+            <div class="swiper-button-next review-next"></div>
+            <div class="swiper-button-prev review-prev"></div>
+            <div class="swiper-pagination review-pagination"></div>
+        </section>
 
 
+        <!-- 建立footer標籤: 定義頁尾 -->
+        <footer>
+
+        </footer>
 
 
-
-
-
-    <!-- 建立footer標籤: 定義頁尾 -->
-    <footer>
-
-    </footer>
-
-
-
-
-
-    <!-- 外部引入Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <!-- 外部引入jQuery -->
-    <script src="../js/jquery-3.7.1.js"></script>
-    <!-- 外部引入js -->
-    <script src="../js/index.js"></script>
+        <!-- 外部引入Swiper -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <!-- 外部引入jQuery -->
+        <script src="../js/jquery-3.7.1.js"></script>
+        <!-- 外部引入js -->
+        <script src="../js/index.js"></script>
 
 </body>
 
