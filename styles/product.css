@@ -1,0 +1,96 @@
+#ProdcutDiv {
+    position: absolute;
+    left: 250px;
+    top: 250px;
+    width: 70vw;
+   
+
+}
+
+.adsImg {
+    width: 70vw;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    background-image: url(../images/transition1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#productGrid {
+    position: absolute;
+    top: 25px;
+}
+
+
+#productTab {
+    position: fixed;
+
+    top: 100px;
+    left: 80px ;
+    width: 150px;
+    height: 200px;
+    z-index: 999;
+
+}
+
+.subTab {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    gap: 8px;
+}
+
+.subTab:hover {
+    color: chocolate;
+    cursor: pointer;
+}
+
+.flag-icon {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/************************************
+ * 設定產品grid
+ ************************************/
+
+.productCard {
+    line-height: 1;
+    text-align: center;
+    font-family: arial;
+}
+
+.productCard img {
+    width: 100%;
+}
+
+
+
+.price {
+    color: rgb(123, 91, 69);
+    font-size: 18px;
+}
+
+.productCard button {
+    border: none;
+    border-radius: 10px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.productCard button:hover {
+    opacity: 0.7;
+}

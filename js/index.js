@@ -1,3 +1,10 @@
+fetch('nav.html') // 請求導航列的 HTML 檔案
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('global-header').innerHTML = data;
+    });
+
+
 //==============================================
 // 區塊 1: 定義資料
 //==============================================
@@ -101,7 +108,6 @@ class productInfo {
         return this.#price;
     }
 }
-
 
 /**
  * @class reviewInfo
@@ -215,8 +221,6 @@ class scoreSet {
     }
 }
 
-
-
 //==============================================
 // 區塊 2: 核心資料庫
 //==============================================
@@ -252,7 +256,6 @@ let productInfoList = [
     new productInfo("Indonesia", "印尼", "蘇門答臘", "獵人小屋", "煙草、藥草、黑巧克力", ["700", "1350"])
 ]
 
-
 /**
  * @const {Object.<string, reviewInfo>} reviewInfoList
  * 儲存所有顧客評論的陣列。
@@ -272,7 +275,6 @@ let reviewInfoList = [
     new reviewInfo("iven0127", "伊凡周", "衣索比亞", "耶加雪菲", "花神之春", new scoreSet(3, 1, 3, 1), "濃郁花香、清爽茶感"),
     new reviewInfo("iven0127", "伊凡周", "衣索比亞", "耶加雪菲", "花神之春", new scoreSet(3, 2, 2, 4), "濃郁花香、清爽茶感")
 ]
-
 
 //==============================================
 // 區塊 3: 事件初始化 (程式碼執行入口)
@@ -360,6 +362,7 @@ function initializeProductCard() {
         slideDiv.append(sub_img, sub_countryName, sub_productName, sub_flavor, sub_price, sub_button);
         wrapperDiv.append(slideDiv);
     }
+    console.log(wrapperDiv);
 }
 
 // 初始化顧客評分卡
@@ -369,15 +372,13 @@ function initializeReviewCard() {
     for (let i = 0; i < reviewInfoList.length; i++) {
         let customerReview = reviewInfoList[i];
         let slideDiv = $("<div class='reviewCard swiper-slide'></div>");
-        let sub_img = $('<img src=../images/reviewLogo.png alt="customer review">');
         let sub_customerName = $(`<h3>${customerReview.userName}</h3>`);
         let sub_location = $(`<p>${customerReview.countryName} | ${customerReview.terroir}</p>`);
         let sub_productName = $(`<p>${customerReview.productName}</p>`);
         let sub_scoreSet = getStarElement(customerReview.scoreSet);
-        let sub_flavor = $(`<p>${customerReview.flavor}</p>`);
+        let sub_flavor = $(`<p class="reviewFlavor">${customerReview.flavor}</p>`);
 
         slideDiv.append(
-            sub_img,
             sub_customerName,
             sub_location,
             sub_productName,
@@ -428,7 +429,6 @@ function createStarHtml(score) {
     return sub_span;
 }
 
-
 // 初始化產品資訊卡輪播系統
 function initializeProductSwiper() {
 
@@ -461,28 +461,9 @@ function initializeProductSwiper() {
             nextEl: ".product-next",
             prevEl: ".product-prev",
         },
-
-        // Let's Make it Autoplay
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false
-        },
-        // Responsive
-        breakpoints: {
-            0: {
-                slidesPerView: 1
-            },
-            768: {
-                slidesPerView: 2
-            },
-            1024: {
-                slidesPerView: 3
-            }
-        }
+     
     });
 }
-
-
 
 // 初始化顧客評分卡輪播系統
 function initializeReviewSwiper() {
@@ -516,26 +497,12 @@ function initializeReviewSwiper() {
             nextEl: ".review-next",
             prevEl: ".review-prev",
         },
-
-        // Let's Make it Autoplay
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false
-        },
-        // Responsive
-        breakpoints: {
-            0: {
-                slidesPerView: 1
-            },
-            768: {
-                slidesPerView: 2
-            },
-            1024: {
-                slidesPerView: 3
-            }
-        }
     });
 }
 
 
+//分頁跳轉事件
+function initializeSwitchPageEvent() {
+    document.getElementById("gotoProductPage").addEventListener("click",)
+}
 

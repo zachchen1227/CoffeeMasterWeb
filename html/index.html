@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>咖啡大師</title>
+    <title>Master's Brew</title>
 
     <link rel="stylesheet" href="../styles/index.css">
 
@@ -18,13 +18,13 @@
 <body>
     <!-- 建立header標籤: 定義頁首，包含網站標題, logo與導覽列 -->
     <header>
-        <h1>咖啡大師</h1>
+       <header id="global-header"></header>
         <nav>
             <ul>
-                <li><a href="#">首頁</a></li>
-                <li><a href="#">精品咖啡</a></li>
-                <li><a href="#">社群分享</a></li>
-                <li><a href="#">聯繫我們</a></li>
+                <li id="gotoHomePage"><a href="index.html">首頁</a></li>
+                <li id="gotoProductPage"><a href="product.html">精品咖啡</a></li>
+                <li id="gotoSocialPage"><a href="index.html">社群分享</a></li>
+                <li id="gotoContactPage"><a href="index.html">聯繫我們</a></li>
             </ul>
         </nav>
     </header>
@@ -82,26 +82,34 @@
         <section class="swiper reviewSwiper">
 
             <div class="swiper-wrapper reviewWrapper">
-                <!-- 客戶評分卡會在index.js依照資料庫內容動態加入 -->                
+                <!-- 客戶評分卡會在index.js依照資料庫內容動態加入 -->
             </div>
             <div class="swiper-button-next review-next"></div>
             <div class="swiper-button-prev review-prev"></div>
             <div class="swiper-pagination review-pagination"></div>
         </section>
 
+        <section class="subscribe">
+            <p>歡迎訂閱Master's Brew電子報，可不定期收到限定優惠唷!</p>
+            <form>
+                <input type="email" placeholder="輸入電子郵件" required>
+                <button type="submit">訂閱</button>
+            </form>
+        </section>
+    </main>
 
-        <!-- 建立footer標籤: 定義頁尾 -->
-        <footer>
+    <!-- 建立footer標籤: 定義頁尾 -->
+    <footer>
+        <p>&copy; 2025 Master'Brew. All Rights Reserved.</p>
+    </footer>
 
-        </footer>
 
-
-        <!-- 外部引入Swiper -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-        <!-- 外部引入jQuery -->
-        <script src="../js/jquery-3.7.1.js"></script>
-        <!-- 外部引入js -->
-        <script src="../js/index.js"></script>
+    <!-- 外部引入Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- 外部引入jQuery -->
+    <script src="../js/jquery-3.7.1.js"></script>
+    <!-- 外部引入js -->
+    <script src="../js/index.js"></script>
 
 </body>
 
