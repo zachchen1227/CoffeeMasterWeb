@@ -1,36 +1,7 @@
-#ProdcutDiv {
-    position: absolute;
-    left: 250px;
-    top: 250px;
-    width: 70vw;
-   
-
-}
-
-.adsImg {
-    width: 70vw;
-    height: 150px;
-    position: absolute;
-    top: 100px;
-    left: 250px;
-    background-image: url(../images/transition1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-}
-
-#productGrid {
-    position: absolute;
-    top: 25px;
-}
-
-
 #productTab {
     position: fixed;
-
     top: 100px;
-    left: 80px ;
+    left: 80px;
     width: 150px;
     height: 200px;
     z-index: 999;
@@ -57,9 +28,39 @@
 }
 
 
+.adsImg {
+    width: 70vw;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    background-image: url(../images/transition1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
 /************************************
  * 設定產品grid
  ************************************/
+
+#ProductDiv-All,
+#ProductDiv-Ethiopia,
+#ProductDiv-Kenya,
+#ProductDiv-Guatemala,
+#ProductDiv-CostaRica,
+#ProductDiv-Colombia,
+#ProductDiv-Brazil,
+#ProductDiv-Indonesia {
+    position: absolute;
+    left: 250px;
+    top: 250px;
+    width: 70vw;
+}
+
+
+
 
 .productCard {
     line-height: 1;
@@ -94,3 +95,11 @@
 .productCard button:hover {
     opacity: 0.7;
 }
+
+/* .productGrid-visible {
+    visibility: visible;
+}
+
+.productGrid-hidden {
+    visibility: hidden;
+} */
