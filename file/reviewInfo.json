@@ -1,0 +1,422 @@
+[
+  {
+    "userId": "indo_074_v3",
+    "userName": "艾登",
+    "countryName": "印尼",
+    "terroir": "曼特寧",
+    "productName": "溼刨精選",
+    "scoreSet": {
+      "sourness_score": 1,
+      "sweetness_score": 2,
+      "bitterness_score": 4,
+      "flavor_score": 5
+    },
+    "flavor": "藥草香, 木質沈穩。"
+  },
+  {
+    "userId": "ethio_018_v3",
+    "userName": "林小雨",
+    "countryName": "衣索比亞",
+    "terroir": "古吉",
+    "productName": "花神之春",
+    "scoreSet": {
+      "sourness_score": 5,
+      "sweetness_score": 5,
+      "bitterness_score": 1,
+      "flavor_score": 5
+    },
+    "flavor": "如蜜般, 花香馥郁。"
+  },
+  {
+    "userId": "kenya_022_v3",
+    "userName": "Liam Black",
+    "countryName": "肯亞",
+    "terroir": "奇里尼亞加",
+    "productName": "番茄風味",
+    "scoreSet": {
+      "sourness_score": 4,
+      "sweetness_score": 3,
+      "bitterness_score": 3,
+      "flavor_score": 4
+    },
+    "flavor": "多汁酸甜, 餘韻悠長。"
+  },
+  {
+    "userId": "col_056_v3",
+    "userName": "菲力",
+    "countryName": "哥倫比亞",
+    "terroir": "納里尼奧",
+    "productName": "水洗經典",
+    "scoreSet": {
+      "sourness_score": 3,
+      "sweetness_score": 3,
+      "bitterness_score": 3,
+      "flavor_score": 3
+    },
+    "flavor": "經典可可, 口感平順。"
+  },
+  {
+    "userId": "guat_038_v3",
+    "userName": "Noah King",
+    "countryName": "瓜地馬拉",
+    "terroir": "安提瓜",
+    "productName": "黑標特選",
+    "scoreSet": {
+      "sourness_score": 3,
+      "sweetness_score": 4,
+      "bitterness_score": 3,
+      "flavor_score": 4
+    },
+    "flavor": "烤杏仁, 甜感佳。"
+  },
+  {
+    "userId": "bra_069_v3",
+    "userName": "蘇菲亞",
+    "countryName": "巴西",
+    "terroir": "喜拉朵",
+    "productName": "美式基礎",
+    "scoreSet": {
+      "sourness_score": 2,
+      "sweetness_score": 4,
+      "bitterness_score": 4,
+      "flavor_score": 3
+    },
+    "flavor": "柔和順口, 花生香。"
+  },
+  {
+    "userId": "crica_046_v3",
+    "userName": "William Lee",
+    "countryName": "哥斯大黎加",
+    "terroir": "中央谷地",
+    "productName": "歐式烘焙",
+    "scoreSet": {
+      "sourness_score": 2,
+      "sweetness_score": 3,
+      "bitterness_score": 3,
+      "flavor_score": 3
+    },
+    "flavor": "口感乾淨, 尾韻持久。"
+  },
+  {
+    "userId": "bra_064_v3",
+    "userName": "傑森王",
+    "countryName": "巴西",
+    "terroir": "米納斯吉拉斯",
+    "productName": "意式首選",
+    "scoreSet": {
+      "sourness_score": 1,
+      "sweetness_score": 3,
+      "bitterness_score": 5,
+      "flavor_score": 4
+    },
+    "flavor": "極低酸, 苦甜巧克力。"
+  },
+  {
+    "userId": "user_z_04_v3",
+    "userName": "James Wilson",
+    "countryName": "哥斯大黎加",
+    "terroir": "塔拉珠",
+    "productName": "黃金甜心",
+    "scoreSet": {
+      "sourness_score": 3,
+      "sweetness_score": 5,
+      "bitterness_score": 2,
+      "flavor_score": 4
+    },
+    "flavor": "蜂蜜, 甜感強, 圓潤。"
+  },
+  {
+    "userId": "yirg_001_v3",
+    "userName": "小葉",
+    "countryName": "衣索比亞",
+    "terroir": "耶加雪菲",
+    "productName": "清晨之露",
+    "scoreSet": {
+      "sourness_score": 5,
+      "sweetness_score": 5,
+      "bitterness_score": 1,
+      "flavor_score": 5
+    },
+    "flavor": "極致花香, 柑橘甜。"
+  },
+  {
+    "userId": "kenya_027_v3",
+    "userName": "Robert Davis",
+    "countryName": "肯亞",
+    "terroir": "尼耶里",
+    "productName": "莊園精選",
+    "scoreSet": {
+      "sourness_score": 5,
+      "sweetness_score": 4,
+      "bitterness_score": 2,
+      "flavor_score": 5
+    },
+    "flavor": "高酸質, 濃郁果汁感。"
+  },
+  {
+    "userId": "guat_031_v3",
+    "userName": "李阿寶",
+    "countryName": "瓜地馬拉",
+    "terroir": "薇薇特南果",
+    "productName": "高山微光",
+    "scoreSet": {
+      "sourness_score": 3,
+      "sweetness_score": 4,
+      "bitterness_score": 3,
+      "flavor_score": 4
+    },
+    "flavor": "核果, 黑糖甜感。"
+  },
+  {
+    "userId": "bra_066_v3",
+    "userName": "Lucas Miller",
+    "countryName": "巴西",
+    "terroir": "米納斯吉拉斯",
+    "productName": "美式基礎",
+    "scoreSet": {
+      "sourness_score": 2,
+      "sweetness_score": 3,
+      "bitterness_score": 4,
+      "flavor_score": 3
+    },
+    "flavor": "奶油般, 焦糖尾韻。"
+  },
+  {
+    "userId": "user_z_06_v3",
+    "userName": "星星點燈",
+    "countryName": "巴西",
+    "terroir": "喜拉朵",
+    "productName": "巴西之星",
+    "scoreSet": {
+      "sourness_score": 1,
+      "sweetness_score": 4,
+      "bitterness_score": 5,
+      "flavor_score": 3
+    },
+    "flavor": "低酸度, 濃郁可可。"
+  },
+  {
+    "userId": "user_z_03_v3",
+    "userName": "Alexander Bell",
+    "countryName": "瓜地馬拉",
+    "terroir": "安提瓜",
+    "productName": "花神優雅",
+    "scoreSet": {
+      "sourness_score": 3,
+      "sweetness_score": 5,
+      "bitterness_score": 4,
+      "flavor_score": 5
+    },
+    "flavor": "焦糖, 經典煙燻味。"
+  },
+  {
+    "userId": "ethio_019_v3",
+    "userName": "Amelia White",
+    "countryName": "衣索比亞",
+    "terroir": "西達摩",
+    "productName": "非洲艷陽",
+    "scoreSet": {
+      "sourness_score": 4,
+      "sweetness_score": 4,
+      "bitterness_score": 1,
+      "flavor_score": 4
+    },
+    "flavor": "熱帶水果, 餘韻茶感。"
+  },
+  {
+    "userId": "indo_071_v3",
+    "userName": "Henry Scott",
+    "countryName": "印尼",
+    "terroir": "蘇門答臘",
+    "productName": "老饕特選",
+    "scoreSet": {
+      "sourness_score": 1,
+      "sweetness_score": 2,
+      "bitterness_score": 5,
+      "flavor_score": 4
+    },
+    "flavor": "厚重, 藥草與黑可可。"
+  },
+  {
+    "userId": "user_z_12_v3",
+    "userName": "安琪拉",
+    "countryName": "哥倫比亞",
+    "terroir": "納里尼奧",
+    "productName": "安地斯風",
+    "scoreSet": {
+      "sourness_score": 4,
+      "sweetness_score": 3,
+      "bitterness_score": 2,
+      "flavor_score": 3
+    },
+    "flavor": "明亮酸, 奶油口感佳。"
+  },
+  {
+    "userId": "guat_032_v3",
+    "userName": "林靜香",
+    "countryName": "瓜地馬拉",
+    "terroir": "安提瓜",
+    "productName": "花神優雅",
+    "scoreSet": {
+      "sourness_score": 3,
+      "sweetness_score": 5,
+      "bitterness_score": 4,
+      "flavor_score": 5
+    },
+    "flavor": "焦糖, 經典煙燻味。"
+  },
+  {
+    "userId": "user_z_14_v3",
+    "userName": "王小夫",
+    "countryName": "印尼",
+    "terroir": "爪哇",
+    "productName": "陳年風味",
+    "scoreSet": {
+      "sourness_score": 2,
+      "sweetness_score": 3,
+      "bitterness_score": 4,
+      "flavor_score": 3
+    },
+    "flavor": "煙草, 乾淨的苦味。"
+  },
+  {
+    "userId": "indo_073_v3",
+    "userName": "Logan Baker",
+    "countryName": "印尼",
+    "terroir": "蘇門答臘",
+    "productName": "黃金曼特",
+    "scoreSet": {
+      "sourness_score": 1,
+      "sweetness_score": 3,
+      "bitterness_score": 5,
+      "flavor_score": 5
+    },
+    "flavor": "極度濃郁, 醇厚飽滿。"
+  },
+  {
+    "userId": "user_z_18_v3",
+    "userName": "果汁機",
+    "countryName": "哥斯大黎加",
+    "terroir": "塔拉珠",
+    "productName": "陽光莊園",
+    "scoreSet": {
+      "sourness_score": 4,
+      "sweetness_score": 5,
+      "bitterness_score": 1,
+      "flavor_score": 4
+    },
+    "flavor": "橙皮酸, 焦糖甜味。"
+  },
+  {
+    "userId": "col_054_v3",
+    "userName": "Matthew King",
+    "countryName": "哥倫比亞",
+    "terroir": "納里尼奧",
+    "productName": "安地斯風",
+    "scoreSet": {
+      "sourness_score": 4,
+      "sweetness_score": 4,
+      "bitterness_score": 2,
+      "flavor_score": 4
+    },
+    "flavor": "熱帶水果, 餘韻綿長。"
+  },
+  {
+    "userId": "guat_036_v3",
+    "userName": "阿寶",
+    "countryName": "瓜地馬拉",
+    "terroir": "安提瓜",
+    "productName": "火山可可",
+    "scoreSet": {
+      "sourness_score": 4,
+      "sweetness_score": 4,
+      "bitterness_score": 3,
+      "flavor_score": 4
+    },
+    "flavor": "果酸適中, 巧克力尾韻。"
+  },
+  {
+    "userId": "indo_078_v3",
+    "userName": "咖啡狂人",
+    "countryName": "印尼",
+    "terroir": "曼特寧",
+    "productName": "黃金曼特",
+    "scoreSet": {
+      "sourness_score": 1,
+      "sweetness_score": 2,
+      "bitterness_score": 5,
+      "flavor_score": 4
+    },
+    "flavor": "焦糖苦, 泥土香氣。"
+  },
+  {
+    "userId": "kenya_028_v3",
+    "userName": "Scarlett Hill",
+    "countryName": "肯亞",
+    "terroir": "奇里尼亞加",
+    "productName": "紅酒酸度",
+    "scoreSet": {
+      "sourness_score": 4,
+      "sweetness_score": 4,
+      "bitterness_score": 3,
+      "flavor_score": 4
+    },
+    "flavor": "酸甜均衡, 尾韻奶油。"
+  },
+  {
+    "userId": "col_058_v3",
+    "userName": "高地人",
+    "countryName": "哥倫比亞",
+    "terroir": "納里尼奧",
+    "productName": "栗子甜心",
+    "scoreSet": {
+      "sourness_score": 4,
+      "sweetness_score": 4,
+      "bitterness_score": 2,
+      "flavor_score": 4
+    },
+    "flavor": "花香, 柑橘, 乾淨。"
+  },
+  {
+    "userId": "guji_006_v3",
+    "userName": "Zoe Baker",
+    "countryName": "衣索比亞",
+    "terroir": "古吉",
+    "productName": "水洗優雅",
+    "scoreSet": {
+      "sourness_score": 5,
+      "sweetness_score": 4,
+      "bitterness_score": 1,
+      "flavor_score": 5
+    },
+    "flavor": "桃子甜, 花香氣明。"
+  },
+  {
+    "userId": "bra_065_v3",
+    "userName": "小咪G",
+    "countryName": "巴西",
+    "terroir": "喜拉朵",
+    "productName": "中深烘焙",
+    "scoreSet": {
+      "sourness_score": 1,
+      "sweetness_score": 4,
+      "bitterness_score": 5,
+      "flavor_score": 3
+    },
+    "flavor": "低酸度, 焦糖可可。"
+  },
+  {
+    "userId": "sidamo_005_v3",
+    "userName": "Hannah Davis",
+    "countryName": "衣索比亞",
+    "terroir": "西達摩",
+    "productName": "水洗優雅",
+    "scoreSet": {
+      "sourness_score": 4,
+      "sweetness_score": 3,
+      "bitterness_score": 2,
+      "flavor_score": 4
+    },
+    "flavor": "清新果酸, 柔和甜。"
+  }
+]

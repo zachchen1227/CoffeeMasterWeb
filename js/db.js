@@ -1,4 +1,64 @@
 /**
+ * @class beanInfo
+ * 咖啡豆產區資訊的資料結構類別
+ * 使用 Private 欄位 (#) 確保資料的封裝性 (Encapsulation)
+ */
+class beanInfo {
+    // 私有欄位
+    #id = ""; // 英文id
+    #countryName = ""; // 國家名稱 (中文)
+    #terroir = [];     // 主要產區/莊園 (陣列)
+    #flavor = "";      // 風味描述 (字串)
+
+    /**
+     * @param {string} id - id(英文)
+     * @param {string} countryName - 國家名稱 (中文)
+     * @param {string[]} terroir - 產區陣列
+     * @param {string} flavor - 風味描述
+     */
+    constructor(id, countryName, terroir, flavor) {
+        this.#id = id;
+        this.#countryName = countryName;
+        this.#terroir = terroir;
+        this.#flavor = flavor;
+    }
+
+    static getDataFromJson(jsonArray) {
+        let dataList = [];
+
+        for (let i = 0; i < jsonArray.length; i++) {
+            let jsondata = jsonArray[i];
+
+            let myInfo = new beanInfo(
+                jsondata.id,
+                jsondata.countryName,
+                jsondata.terroir,
+                jsondata.flavor
+            );
+
+            dataList.push(myInfo);
+        }
+        return dataList;
+    }
+
+    // Public Getters (讀取器)
+    get id() {
+        return this.#id;
+    }
+    get countryName() {
+        return this.#countryName;
+    }
+
+    get terroir() {
+        return this.#terroir;
+    }
+
+    get flavor() {
+        return this.#flavor;
+    }
+}
+
+/**
  * @class productInfo
  * 產品資訊的資料結構類別
  * 使用 Private 欄位 (#) 確保資料的封裝性 (Encapsulation)
@@ -29,6 +89,25 @@ export class productInfo {
         this.#price = price;
     }
 
+    static getDataFromJson(jsonArray) {
+        let dataList = [];
+
+        for (let i = 0; i < jsonArray.length; i++) {
+            let jsondata = jsonArray[i];
+
+            let myInfo = new productInfo(
+                jsondata.id,
+                jsondata.countryName,
+                jsondata.terroir,
+                jsondata.productName,
+                jsondata.flavor,
+                jsondata.price);
+
+            dataList.push(myInfo);
+        }
+        return dataList;
+    }
+
     // Public Getters (讀取器)
     get id() {
         return this.#id;
@@ -56,35 +135,178 @@ export class productInfo {
     }
 }
 
+class reviewInfo {
+    // 私有欄位
+    #userId = "";      // 使用者帳號
+    #userName = "";    // 使用者名稱
+    #countryName = ""; // 國家名稱 (中文)
+    #terroir = "";     // 產區
+    #productName = "";  // 產品名稱
+    #scoreSet = new scoreSet(0, 0, 0, 0);    // 分數陣列，1-5顆星，共四個元素，分別代表酸感、甜感、苦感、風味
+    #flavor = "";      // 風味描述 (字串)
+
+
+    /**
+     * @param {string} userId - 使用者帳號
+     * @param {string} userName - 使用者名稱
+     * @param {string} countryName - 國家名稱 (中文)
+     * @param {string} terroir - 產區
+     * @param {string} productName - 產品名稱
+     * @param {number[]} scoreSet - 分數陣列
+     * @param {string} flavor - 風味描述
+     */
+    constructor(userId, userName, countryName, terroir, productName, scoreSet, flavor) {
+        this.#userId = userId;
+        this.#userName = userName;
+        this.#countryName = countryName;
+        this.#terroir = terroir;
+        this.#productName = productName;
+        this.#scoreSet = scoreSet;
+        this.#flavor = flavor;
+    }
+
+    static getDataFromJson(jsonArray) {
+        let dataList = [];
+
+        for (let i = 0; i < jsonArray.length; i++) {
+            let jsondata = jsonArray[i];
+            console.log(jsondata.id);
+
+
+            let myInfo = new reviewInfo(
+                jsondata.userId,
+                jsondata.userName,
+                jsondata.countryName,
+                jsondata.terroir,
+                jsondata.productName,
+                new scoreSet(
+                    jsondata.scoreSet.sourness_score,
+                    jsondata.scoreSet.sweetness_score,
+                    jsondata.scoreSet.bitterness_score,
+                    jsondata.scoreSet.flavor_score),
+                jsondata.flavor);
+
+
+            dataList.push(myInfo);
+        }
+        return dataList;
+    }
+
+    // Public Getters (讀取器)
+    get userId() {
+        return this.#userId;
+    }
+
+    get userName() {
+        return this.#userName;
+    }
+
+    get countryName() {
+        return this.#countryName;
+    }
+
+    get terroir() {
+        return this.#terroir;
+    }
+
+    get productName() {
+        return this.#productName;
+    }
+
+    get scoreSet() {
+        return this.#scoreSet;
+    }
+
+    get flavor() {
+        return this.#flavor;
+    }
+}
+
+class scoreSet {
+    #sourness_score = 0;
+    #sweetness_score = 0;
+    #bitterness_score = 0;
+    #flavor_score = 0;
+
+    constructor(sourness_score, sweetness_score, bitterness_score, flavor_score) {
+        this.#sourness_score = sourness_score;
+        this.#sweetness_score = sweetness_score;
+        this.#bitterness_score = bitterness_score;
+        this.#flavor_score = flavor_score;
+    }
+
+
+    get sourness_score() {
+        return this.#sourness_score;
+    }
+
+    get sweetness_score() {
+        return this.#sweetness_score;
+    }
+
+    get bitterness_score() {
+        return this.#bitterness_score;
+    }
+
+    get flavor_score() {
+        return this.#flavor_score;
+    }
+
+    set sourness_score(newScore) {
+        this.#sourness_score = newScore;
+    }
+
+    set sweetness_score(newScore) {
+        this.#sweetness_score = newScore;
+    }
+
+    set bitterness_score(newScore) {
+        this.#bitterness_score = newScore;
+    }
+
+    set flavor_score(newScore) {
+        this.#flavor_score = newScore;
+    }
+}
+
 //==============================================
-// 區塊 2: 核心資料庫
+// 區塊 2: 從資料庫載入資料
 //==============================================
 
-/**
- * @const {Object.<string, productInfo>} productInfoList
- * 儲存所有產品資訊的陣列。
- */
-export let productInfoList = [
-    new productInfo("Ethiopia-00", "衣索比亞", "耶加雪菲", "花神之春", "濃郁花香、清爽茶感", ["350", "680"]),
-    new productInfo("Ethiopia-01", "衣索比亞", "西達摩", "豐收大地", "明亮果酸、水果甜感", ["400", "780"]),
-    new productInfo("Kenya-00", "肯亞", "尼耶里", "曠野嘆息", "柑橘、濃郁巧克力", ["450", "880"]),
-    new productInfo("Kenya-01", "肯亞", "奇里尼亞加", "水果派對", "黑醋栗、紅莓果、花香", ["400", "690"]),
-    new productInfo("Guatemala", "瓜地馬拉 ", "薇薇特南果", "悠揚晨曦", "柑橘、莓果、花香", ["380", "750"]),
-    new productInfo("CostaRica", "哥斯大黎加", "塔拉珠", "小熊維尼", "柑橘、蜂蜜、花香", ["550", "1000"]),
-    new productInfo("Colombia", "哥倫比亞 ", "薇拉", "黑色跑車", "橘酸，焦糖、巧克力", ["680", "1280"]),
-    new productInfo("Brazil-00", "巴西", "喜拉朵", "哈囉你好", "紅蘋果、蜂蜜、花香", ["480", "920"]),
-    new productInfo("Brazil-01", "巴西", "米納斯吉拉斯", "火紅聖誕", "甜感、堅果、巧克力", ["500", "970"]),
-    new productInfo("Indonesia", "印尼", "蘇門答臘", "獵人小屋", "煙草、藥草、黑巧克力", ["700", "1350"]),
+// 取得BeanInfo資料
+export async function GetBeanInfoData(url) {
+    let dataList = await getData(beanInfo, url);
+    return dataList;
+}
 
-     new productInfo("Ethiopia-00", "衣索比亞", "耶加雪菲", "花神之春", "濃郁花香、清爽茶感", ["350", "680"]),
-    new productInfo("Ethiopia-01", "衣索比亞", "西達摩", "豐收大地", "明亮果酸、水果甜感", ["400", "780"]),
-    new productInfo("Kenya-00", "肯亞", "尼耶里", "曠野嘆息", "柑橘、濃郁巧克力", ["450", "880"]),
-    new productInfo("Kenya-01", "肯亞", "奇里尼亞加", "水果派對", "黑醋栗、紅莓果、花香", ["400", "690"]),
-    new productInfo("Guatemala", "瓜地馬拉 ", "薇薇特南果", "悠揚晨曦", "柑橘、莓果、花香", ["380", "750"]),
-    new productInfo("CostaRica", "哥斯大黎加", "塔拉珠", "小熊維尼", "柑橘、蜂蜜、花香", ["550", "1000"]),
-    new productInfo("Colombia", "哥倫比亞 ", "薇拉", "黑色跑車", "橘酸，焦糖、巧克力", ["680", "1280"]),
-    new productInfo("Brazil-00", "巴西", "喜拉朵", "哈囉你好", "紅蘋果、蜂蜜、花香", ["480", "920"]),
-    new productInfo("Brazil-01", "巴西", "米納斯吉拉斯", "火紅聖誕", "甜感、堅果、巧克力", ["500", "970"]),
-    new productInfo("Indonesia", "印尼", "蘇門答臘", "獵人小屋", "煙草、藥草、黑巧克力", ["700", "1350"])
+// 取得ProductInfo資料
+export async function GetProductInfoData(url) {
+    let dataList = await getData(productInfo, url);
+    return dataList;
+}
 
-]
+// 取得ReviewInfo資料
+export async function GetReviewInfoData(url) {
+    let dataList = await getData(reviewInfo, url);
+    return dataList;
+}
+
+//使用fetch從資料庫讀取資料
+async function getData(dataType, url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+        const result = await response.json();
+        let dataList = dataType.getDataFromJson(result);
+        return dataList;
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+
+
+
+

@@ -71,7 +71,7 @@ header h1 {
     height: 50vw;
     position: relative;
     background-color: rgba(127, 217, 255, 0.288);
-    background-image: url(../images/worldmap.png), url(../images/ba1.png);
+    background-image: url(../images/worldmap1.png), url(../images/ba1.png);
     background-size: contain, cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -313,11 +313,11 @@ header h1 {
 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
-    padding: 10px;
+    font-size: 30px;
 
-    margin-bottom: 10px;
+    line-height: 2;
 
-    font-size: 35px;
+
 
 }
 
@@ -333,7 +333,7 @@ header h1 {
 
 .reviewCard {
     border-radius: 10px;
-    max-width: 200px;
+    max-width: 220px;
     line-height: 1.5;
     text-align: center;
     font-family: arial;
@@ -346,9 +346,14 @@ header h1 {
 }
 
 .reviewCard p {
-    margin:10px;
+    margin: 10px;
     color: #000000;
     font-weight: bold;
+}
+
+#reviewFlavor{
+    font-size: 17px;
+
 }
 
 .checked {

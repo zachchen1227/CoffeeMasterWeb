@@ -1,4 +1,4 @@
-import { productInfoList } from "../js/db.js";
+import { GetProductInfoData } from "./db.js";
 
 
 // 請求導航列的 HTML 檔案
@@ -14,40 +14,13 @@ function initializePage() {
     initializeProductCard();
     initializeTabProductEvent();
     showProductGrid("ProductDiv-All");
-
 }
-
-function initializeTabProductEvent() {
-    let productTabList = $("div").filter(".subTab");
-    for (let i = 0; i < productTabList.length; i++) {
-        productTabList[i].addEventListener("click", function () {
-            let countryName = productTabList[i].id.split("-")[1];
-
-            showProductGrid(`ProductDiv-${countryName}`);
-        })
-    }
-}
-
-
-function showProductGrid(target) {
-    let productDivList = $("div").filter(".productDiv");
-    for (let i = 0; i < productDivList.length; i++) {
-        let divId = productDivList[i].id;
-        if (divId == target) {
-            document.getElementById(divId).style.display="block";
-        } else {
-           document.getElementById(divId).style.display="none";
-
-        }
-    }
-}
-
-
-
-
 
 // 初始化產品卡
-function initializeProductCard() {
+async function initializeProductCard() {
+
+    let productInfoList = await GetProductInfoData("../file/productInfo.json");
+
     let productDivList = $("div").filter(".productDiv");
 
     for (let i = 0; i < productDivList.length; i++) {
@@ -77,4 +50,28 @@ function initializeProductCard() {
         }
     }
 
+}
+
+function initializeTabProductEvent() {
+    let productTabList = $("div").filter(".subTab");
+    for (let i = 0; i < productTabList.length; i++) {
+        productTabList[i].addEventListener("click", function () {
+            let countryName = productTabList[i].id.split("-")[1];
+
+            showProductGrid(`ProductDiv-${countryName}`);
+        })
+    }
+}
+
+function showProductGrid(target) {
+    let productDivList = $("div").filter(".productDiv");
+    for (let i = 0; i < productDivList.length; i++) {
+        let divId = productDivList[i].id;
+        if (divId == target) {
+            document.getElementById(divId).style.display = "block";
+        } else {
+            document.getElementById(divId).style.display = "none";
+
+        }
+    }
 }
