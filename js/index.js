@@ -85,15 +85,29 @@ async function initializeProductCard() {
         let slideDiv = $("<div class='productCard swiper-slide'></div>");
         let sub_img = $(`<img src=../images/product/product_${productInfoList[i].id}.jpg alt="Master's Brew">`);
         let sub_countryName = $(`<h3>${productInfoList[i].countryName} | ${productInfoList[i].terroir}</h3>`);
-        let sub_productName = $(`<p><strong>${productInfoList[i].productName}</strong></p>`);
+        let sub_productName = $(`<p class = "productName"><strong>${productInfoList[i].productName}</strong></p>`);
         let sub_flavor = $(`<p>${productInfoList[i].flavor}</p>`);
-        let sub_price = $(`<p class = "price"><strong>NT$${productInfoList[i].price[0]} ~ NT$${productInfoList[i].price[1]}</strong></p>`);
-        let sub_button = $("<p><button>加入購物車</button></p>");
+        let sub_price = $(`<p class = "price"><strong>NT$${productInfoList[i].price}</strong></p>`);
+        let sub_button = $("<p><button class='add-to-cart-btn'>加入購物車</button></p>");
         slideDiv.append(sub_img, sub_countryName, sub_productName, sub_flavor, sub_price, sub_button);
         wrapperDiv.append(slideDiv);
     }
-    console.log(wrapperDiv);
+
+    wrapperDiv.on("click", ".add-to-cart-btn", function (e) {
+        // $(this) 在此處指向被點擊的按鈕
+        let productCard = $(this).closest('.productCard');
+        let productName = productCard.find('.productName')[0].innerText;
+        let productPrice =productCard.find('.price')[0].innerText;
+        alert(productName + " 已成功加入購物車!");       
+    });
 }
+
+function aaa() {
+
+    let wrapperDiv = $(".productWrapper");
+
+}
+
 
 // 初始化顧客評分卡
 async function initializeReviewCard() {
@@ -120,6 +134,8 @@ async function initializeReviewCard() {
         wrapperDiv.append(slideDiv);
     }
 }
+
+
 
 function getStarElement(scoreSet) {
 

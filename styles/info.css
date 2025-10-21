@@ -1,0 +1,71 @@
+ /* Style inputs with type="text", select elements and textareas */
+ input[type=text],
+ select,
+ textarea {
+     width: 100%;
+     /* Full width */
+     padding: 12px;
+     /* Some padding */
+     border: 1px solid #ccc;
+     /* Gray border */
+     border-radius: 4px;
+     /* Rounded borders */
+     box-sizing: border-box;
+     /* Make sure that padding and width stays in place */
+     margin-top: 6px;
+     /* Add a top margin */
+     margin-bottom: 16px;
+     /* Bottom margin */
+     resize: vertical
+         /* Allow the user to vertically resize the textarea (not horizontally) */
+ }
+
+ /* Style the submit button with a specific background color etc */
+ input[type=submit] {
+     background-color: #04AA6D;
+     color: white;
+     padding: 12px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ /* When moving the mouse over the submit button, add a darker green color */
+ input[type=submit]:hover {
+     background-color: #45a049;
+ }
+
+ /* Add a background color and some padding around the form */
+ .container {
+     /* 保持固定定位 */
+     position: fixed;
+
+     /* 1. 將容器的左上角移動到頁面/視窗的中心點 */
+     top: 55%;
+     left: 50%;
+
+     /* 2. 關鍵步驟：使用 transform 屬性將元素自身向左和向上平移其自身寬高的一半 */
+     /* 這樣才能真正達到置中 */
+     transform: translate(-50%, -50%);
+
+     /* 保持您的其他樣式 */
+     border-radius: 5px;
+     background-color: #f2f2f2;
+     padding: 20px;
+     max-width: 600px;
+     /* 您設定的最大寬度 */
+
+     /* 確保寬度已設定，因為 transform 需要知道元素的尺寸 */
+     width: 90%;
+     /* 確保在小螢幕上也不會超出，並結合 max-width 600px 使用 */
+
+ }
+
+ #test {
+     background-color: rgba(127, 217, 255, 0.288);
+     background-image: url(../images/worldmap1.png), url(../images/ba1.png);
+     background-size: contain, cover;
+     background-repeat: no-repeat;
+     background-position: center;
+
+ }

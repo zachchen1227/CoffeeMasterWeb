@@ -40,15 +40,24 @@ async function initializeProductCard() {
                 let colDiv = $("<div class='productCard col-3'></div>");
                 let sub_img = $(`<img src=../images/product/product_${myInfo.id}.jpg alt="Master's Brew">`);
                 let sub_countryName = $(`<p><strong>${myInfo.countryName} | ${myInfo.terroir}<strong></p>`);
-                let sub_productName = $(`<p><strong>${myInfo.productName}</strong></p>`);
+                let sub_productName = $(`<p class = "productName"><strong>${myInfo.productName}</strong></p>`);
                 let sub_flavor = $(`<p>${myInfo.flavor}</p>`);
-                let sub_price = $(`<p class = "price"><strong>NT$${myInfo.price[0]} ~ NT$${myInfo.price[1]}</strong></p>`);
-                let sub_button = $("<p><button>加入購物車</button></p>");
+                let sub_price = $(`<p class = "price"><strong>NT$${myInfo.price}</strong></p>`);
+                let sub_button = $("<p class = 'add-to-cart-btn'><button>加入購物車</button></p>");
                 colDiv.append(sub_img, sub_countryName, sub_productName, sub_flavor, sub_price, sub_button);
                 productRow.append(colDiv);
             }
         }
+
     }
+
+    productDivList.on("click", ".add-to-cart-btn", function (e) {
+        // $(this) 在此處指向被點擊的按鈕
+        let productCard = $(this).closest('.productCard');
+        let productName = productCard.find('.productName')[0].innerText;
+        let productPrice = productCard.find('.price')[0].innerText;
+        alert(productName + " 已成功加入購物車!");
+    });
 
 }
 

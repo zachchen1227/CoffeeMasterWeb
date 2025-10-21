@@ -5,23 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master's Brew</title>
+    <link rel="stylesheet" href="../styles/info.css">
+
 </head>
 
 <body>
-     <header id="global-header"></header>
-     
+    <header id="global-header"></header>
 
+    <div id="test">
 
+        <div class="container">
+            <form>
 
+                <label for="fname">名</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <button id="clickMe">按我</button>
+                <label for="lname">姓</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
+                <label for="country">國家</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>請選擇國家</option>
+                    <option value="australia">澳大利亞 (Australia)</option>
+                    <option value="canada">加拿大 (Canada)</option>
+                    <option value="usa">美國 (USA)</option>
+                    <option value="newzealand">紐西蘭 (New Zealand)</option>
 
+                    <option value="china">中國 (China)</option>
+                    <option value="japan">日本 (Japan)</option>
+                    <option value="korea">韓國 (South Korea)</option>
+                    <option value="thailand">泰國 (Thailand)</option>
+                    <option value="india">印度 (India)</option>
+                    <option value="indonesia">印尼 (Indonesia)</option>
+                    <option value="vietnam">越南 (Vietnam)</option>
+                    <option value="philippines">菲律賓 (Philippines)</option>
+                    <option value="malaysia">馬來西亞 (Malaysia)</option>
+                    <option value="singapore">新加坡 (Singapore)</option>
+                    <option value="hongkong">香港 (Hong Kong)</option>
+                    <option value="taiwan">臺灣 (Taiwan)</option>
 
+                    <option value="uk">英國 (UK)</option>
+                    <option value="france">法國 (France)</option>
+                    <option value="germany">德國 (Germany)</option>
+                    <option value="russia">俄羅斯 (Russia)</option>
+                    <option value="italy">義大利 (Italy)</option>
+                    <option value="spain">西班牙 (Spain)</option>
+                    <option value="netherlands">荷蘭 (Netherlands)</option>
+                    <option value="switzerland">瑞士 (Switzerland)</option>
+                    <option value="belgium">比利時 (Belgium)</option>
+                    <option value="greece">希臘 (Greece)</option>
+                    <option value="austria">奧地利 (Austria)</option>
 
+                    <option value="brazil">巴西 (Brazil)</option>
+                    <option value="mexico">墨西哥 (Mexico)</option>
+                    <option value="argentina">阿根廷 (Argentina)</option>
+                    <option value="chile">智利 (Chile)</option>
+                    <option value="peru">秘魯 (Peru)</option>
 
+                    <option value="uae">阿拉伯聯合大公國 (UAE)</option>
+                    <option value="saudiarabia">沙烏地阿拉伯 (Saudi Arabia)</option>
+                    <option value="egypt">埃及 (Egypt)</option>
+                    <option value="southafrica">南非 (South Africa)</option>
 
+                </select>
 
+                <label for="subject">意見</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+                <input id="data-summit" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 
 
     <!-- 外部引入jQuery -->

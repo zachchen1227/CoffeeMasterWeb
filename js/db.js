@@ -70,7 +70,7 @@ export class productInfo {
     #terroir = "";     // 主要產區/莊園 (字串)
     #productName = "";  // 產品名稱 (字串)
     #flavor = "";      // 風味描述 (字串)
-    #price = [];       // 價格 (陣列)
+    #price = "";       // 價格
 
     /**
      * @param {string} id - id(英文)
@@ -78,7 +78,7 @@ export class productInfo {
      * @param {string} terroir - 產區
      * @param {string} productName - 產品名稱 (字串)
      * @param {string} flavor - 風味描述
-     * @param {string[]} price - 價格 (陣列)
+     * @param {string} price - 價格 
      */
     constructor(id, countryName, terroir, productName, flavor, price) {
         this.#id = id;
@@ -170,9 +170,7 @@ class reviewInfo {
 
         for (let i = 0; i < jsonArray.length; i++) {
             let jsondata = jsonArray[i];
-            console.log(jsondata.id);
-
-
+            
             let myInfo = new reviewInfo(
                 jsondata.userId,
                 jsondata.userName,
