@@ -1,10 +1,14 @@
-import { GetBeanInfoData, GetReviewInfoData, GetProductInfoData } from "./db.js";
+import { GetBeanInfoData, GetReviewInfoData, GetProductInfoData, updateCartCount } from "./db.js";
 
 fetch('nav.html') // 請求導航列的 HTML 檔案
     .then(response => response.text())
     .then(data => {
         document.getElementById('global-header').innerHTML = data;
     });
+
+
+
+
 
 // 畫面載入完成後執行的主要啟動函式
 document.addEventListener('DOMContentLoaded', initializePage);
@@ -14,6 +18,11 @@ function initializePage() {
     initializeBeaconEvents();
     initializeProductSwiper();
     initializeReviewSwiper();
+
+    let myGlobalValue = { cartCount: "0" };
+
+    // 儲存：將物件轉換成 JSON 字串後儲存
+    localStorage.setItem('cart_count', JSON.stringify(myGlobalValue));
 }
 
 /**
@@ -97,8 +106,42 @@ async function initializeProductCard() {
         // $(this) 在此處指向被點擊的按鈕
         let productCard = $(this).closest('.productCard');
         let productName = productCard.find('.productName')[0].innerText;
-        let productPrice =productCard.find('.price')[0].innerText;
-        alert(productName + " 已成功加入購物車!");       
+        let productPrice = productCard.find('.price')[0].innerText;
+
+
+        const storedDataString = localStorage.getItem('cart_count');
+
+        if (storedDataString) {
+            // 解析：將 JSON 字串轉換回 JavaScript 物件
+            let myGlobalValue = JSON.parse(storedDataString);
+            console.log(myGlobalValue.cartCount); // 輸出 "John"
+
+
+            let newCount = Number(myGlobalValue.cartCount) + 1;
+
+
+            let cartNumberElement = document.getElementsByClassName("cmw-count");
+            cartNumberElement[0].innerText = newCount;
+
+
+            // 宣告要儲存的 JavaScript 物件
+            let updateData = {
+                cartCount: newCount
+            };
+
+            // 【序列化】: 將 JavaScript 物件轉換成 JSON 字串
+            const userDataString = JSON.stringify(updateData);
+
+            // 【儲存】: 使用 localStorage.setItem() 存入瀏覽器
+            localStorage.setItem('cart_count', userDataString);
+            alert(productName + " 已成功加入購物車!");
+        }
+
+
+
+
+
+
     });
 }
 

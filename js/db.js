@@ -1,3 +1,16 @@
+
+var CartCount = 0;
+
+localStorage.setItem('cartNumber', '1');
+
+export function updateCartCount(){
+
+    let cartNumber = Number(localStorage.getItem("cartNumber"))+1;
+    localStorage.setItem("cartNumber", cartNumber);
+    return cartNumber;
+}
+
+
 /**
  * @class beanInfo
  * 咖啡豆產區資訊的資料結構類別

@@ -30,7 +30,7 @@ header li {
 
 header ul {
     position: absolute;
-    right: 5vw;
+    right: 8vw;
     top: 0;
     line-height: 75px;
     font-size: 28px;
@@ -50,4 +50,19 @@ header h1 {
     background-color: transparent;
 
     text-indent: -9999px;
+}
+
+#cart-button {
+    position: fixed;
+    right: 3vw;
+    font-size: 30px;
+    color: white;
+    top: 0;
+    line-height: 75px;
+}
+
+#cart-button:hover {
+    filter: drop-shadow(0 0 10px rgba(11, 1, 28, 0.9));
+    transform: translateY(-3px) scale(1.05);
+    cursor: pointer;
 }

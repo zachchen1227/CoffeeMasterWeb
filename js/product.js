@@ -1,4 +1,4 @@
-import { GetProductInfoData } from "./db.js";
+import { GetProductInfoData, updateCartCount } from "./db.js";
 
 
 // 請求導航列的 HTML 檔案
@@ -56,6 +56,12 @@ async function initializeProductCard() {
         let productCard = $(this).closest('.productCard');
         let productName = productCard.find('.productName')[0].innerText;
         let productPrice = productCard.find('.price')[0].innerText;
+
+        let cartNumberElement = document.getElementsByClassName("cmw-count");
+        cartNumberElement[0].innerText = updateCartCount();
+
+    
+
         alert(productName + " 已成功加入購物車!");
     });
 

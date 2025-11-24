@@ -7,7 +7,7 @@
     <title>Master's Brew</title>
 
     <link rel="stylesheet" href="../styles/nav.css">
-    <!-- <link rel="stylesheet" href="../styles/cart.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 
 
 </head>
@@ -24,13 +24,20 @@
             </ul>
         </nav>
 
-        <!-- <div id="cart-button" class="cart-button nav-cart">
-            <span class="cmw-icon" aria-hidden="true">🛒</span>
+        <div id="cart-button" class="cart-button nav-cart">
+            <i class="cmw-icon ri-shopping-cart-fill" style="font-size: 30px; color:white;"></i>
             <span class="cmw-count" aria-live="polite">0</span>
-        </div> -->
+        </div>
     </header>
 
-    <!-- <script src="../js/cart.js"></script> -->
+    <script>
+        document.getElementsByClassName('cmw-count')[0].innerText = localStorage.getItem("cartNumber");
+
+    </script>
+
+
+
+    <!-- <script src="../js/nav.js"></script> -->
 </body>
 
 </html>
